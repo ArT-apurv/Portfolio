@@ -4,10 +4,12 @@ var myState = {
   zoom: 1,
 };
 
-pdfjsLib.getDocument("/Resume.pdf").then((pdf) => {
-  myState.pdf = pdf;
-  render();
-});
+pdfjsLib
+  .getDocument("https://art-apurv.github.io/Portfolio/Resume.pdf")
+  .then((pdf) => {
+    myState.pdf = pdf;
+    render();
+  });
 
 function render() {
   myState.pdf.getPage(myState.currentPage).then((page) => {

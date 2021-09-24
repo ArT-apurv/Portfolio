@@ -5,7 +5,7 @@ var myState = {
 };
 
 pdfjsLib
-  .getDocument("https://art-apurv.github.io/Portfolio/Resume.pdf")
+  .getDocument("https://art-apurv.github.io/Portfolio/./Resume.pdf")
   .then((pdf) => {
     myState.pdf = pdf;
     render();

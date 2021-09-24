@@ -4,12 +4,10 @@ var myState = {
   zoom: 1,
 };
 
-pdfjsLib
-  .getDocument("https://art-apurv.github.io/Portfolio/Apurv Krishna (4).pdf")
-  .then((pdf) => {
-    myState.pdf = pdf;
-    render();
-  });
+pdfjsLib.getDocument("/Resume.pdf").then((pdf) => {
+  myState.pdf = pdf;
+  render();
+});
 
 function render() {
   myState.pdf.getPage(myState.currentPage).then((page) => {
